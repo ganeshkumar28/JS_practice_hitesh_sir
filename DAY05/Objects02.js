@@ -64,3 +64,18 @@ console.log(Object.entries(tinderUser));
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))
 console.log(tinderUser.hasOwnProperty('age'))
 
+
+
+// Destructing of object
+
+const course ={
+    name : "JS",
+    duration:"1 hour",
+    courseInstructor:"GK"
+}
+
+//destructing
+const {courseInstructor: instructor} = course
+
+console.log(instructor)
+

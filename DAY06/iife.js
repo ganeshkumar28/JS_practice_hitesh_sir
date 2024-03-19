@@ -7,9 +7,13 @@
 
 //Syntax
 
-(function database(){
+(function database(){   //Named IIFE
     console.log(`Database Connected`);
-})()
+})();   // Always a IIFE function should end with ';'
+
+((name)=>{          // Simple IIFE
+    console.log(`DB Connected, ${name}`);
+})('Thor');
 
 
 

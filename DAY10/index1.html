@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <div class="parent">
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+            <div class="day">Thursday</div>
+        </div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector(".parent")
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[0].innerHTML);
+
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML)
+    }
+    parent.children[0].style.color = "orange"
+
+
+    //properties
+    console.log(parent.firstElementChild) //asccess the first child 
+    console.log(parent.lastElementChild)  // access the last child
+
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement); // access the parent of the child
+    console.log(dayOne.nextElementSibling); // access the next sibling of the element
+
+    console.log("NODES => ",parent.childNodes);
+</script>
+</html>
